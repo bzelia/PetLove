@@ -193,8 +193,25 @@
       <td >12</td>
       <td >R$ 460,00</td>
       <td > <button type="submit" class="btn btn-editar">Editar</button></td>
-      <td ><button type="submit" class="btn btn-excluir popup">Excluir</button>
+      <td ><button class="btn btn-excluir" onclick="excluir()">Excluir</button></td>
 
+
+
+<script>
+function excluir()
+{
+var x;
+var r=confirm("Deseja Excluir?");
+if (r==true)
+  {
+  x="você pressionou OK!";
+  }
+else
+  {
+  x="Você pressionou Cancelar!";
+  }
+
+}
 </script>
 
 
