@@ -127,27 +127,10 @@
       <td > <?=$registro['estoque']?></td>
       <td > <?=$registro['preco']?></td>
       <td > <a href="update.php?id=<?=$registro['id']?>"  class="btn btn-editar">Editar</a></td>
-      <td > <a href="delete.php?id=<?=$registro['id']?>" class="btn btn-excluir" >Excluir</button></td>
+      <td > <a onClick="return confirm('Deseja Excluir?')" href="delete.php?id=<?=$registro['id']?>" type='button' class='btn btn-excluir'>Excluir</a>
       <?php endwhile; ?>
 
 
-<script>
-function excluir()
-{
-var x;
-var r=confirm("Deseja Excluir?");
-if (r==true)
-  {
-  x="você pressionou OK!";
-  
-  }
-else
-  {
-  x="Você pressionou Cancelar!";
-  }
-
-}
-</script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
