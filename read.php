@@ -121,11 +121,11 @@
   <?php while($registro = mysqli_fetch_assoc($resultado)): ?>
     <tr >
       <td  style="text-align: center" > </td>
-      <td ><?=$registro['id']?></td>
-       <td  ><?=$registro['descricao']?></td>
-       <td ><?=$registro['marca']?></td>
-      <td ><?=$registro['estoque']?></td>
-      <td ><?=$registro['preco']?></td>
+      <td > <?=$registro['id']?></td>
+      <td > <?=$registro['descricao']?></td>
+      <td > <?=$registro['marca']?></td>
+      <td > <?=$registro['estoque']?></td>
+      <td > <?=$registro['preco']?></td>
       <td > <a href="update.php?id=<?=$registro['id']?>"  class="btn btn-editar">Editar</a></td>
       <td > <a href="delete.php?id=<?=$registro['id']?>" class="btn btn-excluir" >Excluir</button></td>
       <?php endwhile; ?>
