@@ -9,17 +9,18 @@
 </head>
 
 <body>
+
     <?php
     require('conexao.php');
     $id = $_GET['id'];
     mysqli_query($conexao, "DELETE FROM produtos WHERE id = $id");
 
     ?>
+
     <script type="text/javascript">
-        alert("Produto excluido com sucesso!");
+        alert("Produto excluido com sucesso");
         window.location = "read.php";
     </script>
-
 </body>
 
 </html>
