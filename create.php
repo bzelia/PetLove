@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -78,13 +78,9 @@
   <div class="col-md-12 pb-3 text-center">
   <h3>Novo Produto</h3>
   </div>
-  
-
 </div>
 
-
-
-<form action=" formulario pb-5">
+<form action="insert.php" method="post">
   <div class="form-group">
     <label for="nome">Nome</label>
     <input type="text" class="form-control" name="descricao" id="descricao" aria-describedby="descricao" placeholder="nome do produto" required>
@@ -105,8 +101,8 @@
 
     <input type="file" class="form-control-file" name="imagem" id="imagem">
   </div>
-  <button type="submit" class="btn btn-cancelar ">Cancelar</button>
-  <a href="read.php" type="submit" class="btn btn-cadastrar">Cadastrar</a>
+  <button type="submit" class="btn btn-cancelar">Cancelar</button>
+  <button type="submit" class="btn btn-cadastrar">Cadastrar</button>
 </form>
 
 
