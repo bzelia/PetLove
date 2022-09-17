@@ -84,29 +84,29 @@
 
 
 
-<form class="formulario pb-5">
+<form action=" formulario pb-5">
   <div class="form-group">
     <label for="nome">Nome</label>
-    <input type="text" class="form-control" id="nome" aria-describedby="descricao" placeholder="nome do produto" required>
+    <input type="text" class="form-control" name="descricao" id="descricao" aria-describedby="descricao" placeholder="nome do produto" required>
   </div>
   <div class="form-group">
     <label for="marca">Marca</label>
-    <input type="text" class="form-control" id="marca" aria-describedby="marca" placeholder="marca do produto" required>
+    <input type="text" class="form-control" name="marca" id="marca" aria-describedby="marca" placeholder="marca do produto" required>
   </div>
   <div class="form-group">
     <label for="estoque">Estoque</label>
-    <input type="number" class="form-control" id="estoque" aria-describedby="estoque" placeholder="quantidade de estoque" required>
+    <input type="number" class="form-control" name="estoque" id="estoque" aria-describedby="estoque" placeholder="quantidade de estoque" required>
   </div>
   <div class="form-group">
     <label for="preco">Preço</label>
-    <input type="number" class="form-control" id="preco" aria-describedby="preco" placeholder="R$" required>
+    <input type="number" class="form-control" name="preco" id="preco" aria-describedby="preco" placeholder="R$" required>
   </div>
   <div class="form-group pb-3 pt-2">
 
-    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+    <input type="file" class="form-control-file" name="imagem" id="imagem">
   </div>
   <button type="submit" class="btn btn-cancelar ">Cancelar</button>
-  <button type="submit" class="btn btn-cadastrar">Cadastrar</button>
+  <a href="read.php" type="submit" class="btn btn-cadastrar">Cadastrar</a>
 </form>
 
 

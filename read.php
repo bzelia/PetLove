@@ -127,7 +127,7 @@
       <td ><?=$registro['estoque']?></td>
       <td ><?=$registro['preco']?></td>
       <td > <a href="update.php?id=<?=$registro['id']?>"  class="btn btn-editar">Editar</a></td>
-      <td ><button class="btn btn-excluir" onclick="excluir()">Excluir</button></td>
+      <td > <a href="delete.php?id=<?=$registro['id']?>" class="btn btn-excluir" >Excluir</button></td>
       <?php endwhile; ?>
 
 
@@ -139,6 +139,7 @@ var r=confirm("Deseja Excluir?");
 if (r==true)
   {
   x="você pressionou OK!";
+  
   }
 else
   {
