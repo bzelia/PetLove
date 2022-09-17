@@ -70,74 +70,6 @@
         justify-content : center;
       }
 
-      /* Button used to open the contact form - fixed at the bottom of the page */
-.open-button {
-  background-color: #555;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  opacity: 0.8;
-  position: fixed;
-  bottom: 23px;
-  right: 28px;
-  width: 280px;
-}
-
-/* The popup form - hidden by default */
-.form-popup {
-  display: none;
-  position: fixed;
-  bottom: 0;
-  right: 15px;
-  border: 3px solid #f1f1f1;
-  z-index: 9;
-}
-
-/* Add styles to the form container */
-.form-container {
-  max-width: 300px;
-  padding: 10px;
-  background-color: white;
-}
-
-/* Full-width input fields */
-.form-container input[type=text], .form-container input[type=password] {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  border: none;
-  background: #f1f1f1;
-}
-
-/* When the inputs get focus, do something */
-.form-container input[type=text]:focus, .form-container input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
-}
-
-/* Set a style for the submit/login button */
-.form-container .btn {
-  background-color: #04AA6D;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  margin-bottom:10px;
-  opacity: 0.8;
-}
-
-/* Add a red background color to the cancel button */
-.form-container .cancel {
-  background-color: red;
-}
-
-/* Add some hover effects to buttons */
-.form-container .btn:hover, .open-button:hover {
-  opacity: 1;
-}
-
  
     </style>
 </head>
@@ -160,10 +92,10 @@
   </div>
 
   <div class="col-md-2 pb-3 text-right">
-  <button  type="submit" class="btn  new-p" ><span class="material-icons pr-1">
+  <a href="create.php" class="btn  new-p" ><span class="material-icons pr-1">
   add
   </span>
-  Novo Produto</button>
+  Novo Produto</a>
 
 </div>
 </div>
@@ -178,23 +110,25 @@
       <th scope="col">Preço</th>
       <th scope="col"></th>
       <th scope="col"></th>
-     
     </tr>
+    <?php
+            require('conexao.php');
+            $resultado = mysqli_query($conexao, 'SELECT * FROM produtos ORDER BY id ASC');
+          ?>
+
   </thead>
   <tbody class="produtos w-100">
-
+  <?php while($registro = mysqli_fetch_assoc($resultado)): ?>
     <tr >
-      <td  style="text-align: center" >  <img src="img/jardineira_pet_sullivan_monstros_s_a_femea_2017_1_e09beea2e2917c0a785596a93147a2bc.webp" height="auto" class="card-img-top" alt="...">
-   </td>
-   <td  >#43</td>
-      <td >Jardineira Pet Sullivan Monstros S.A. Fêmea</td>
- 
-      <td >PETLOVE</td>
-      <td >12</td>
-      <td >R$ 460,00</td>
-      <td > <button type="submit" class="btn btn-editar">Editar</button></td>
+      <td  style="text-align: center" > </td>
+      <td ><?=$registro['id']?></td>
+       <td  ><?=$registro['descricao']?></td>
+       <td ><?=$registro['marca']?></td>
+      <td ><?=$registro['estoque']?></td>
+      <td ><?=$registro['preco']?></td>
+      <td > <a href="update.php?id=<?=$registro['id']?>"  class="btn btn-editar">Editar</a></td>
       <td ><button class="btn btn-excluir" onclick="excluir()">Excluir</button></td>
-
+      <?php endwhile; ?>
 
 
 <script>
