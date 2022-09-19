@@ -86,35 +86,34 @@
   <div class="col-md-12 pb-3 text-center">
   <h3>Editar Produto</h3>
   </div>
-  
-
 </div>
 
-
-
-<form action ="editar.php" class="formulario pb-5" method="post">
+<form action="editar.php" method="post">
+<div class="form-group">
+    <input type="hidden" class="form-control" name="id" id="id" value="<?=$produto['id']?>">
+  </div>
   <div class="form-group">
     <label for="nome">Nome</label>
-    <input type="text" class="form-control" nome="descricao" id="nome" aria-describedby="descricao" value="<?=$produto['descricao']?>" placeholder="nome do produto" required>
+    <input type="text" class="form-control" name="descricao" id="descricao" aria-describedby="descricao" value="<?=$produto['descricao']?>" placeholder="nome do produto">
   </div>
   <div class="form-group">
     <label for="marca">Marca</label>
-    <input type="text" class="form-control" id="marca" aria-describedby="marca" value="<?=$produto['marca']?>" placeholder="marca do produto" required>
+    <input type="text" class="form-control" name="marca" id="marca" aria-describedby="marca" value="<?=$produto['marca']?>" placeholder="marca do produto">
   </div>
   <div class="form-group">
     <label for="estoque">Estoque</label>
-    <input type="number" class="form-control" id="estoque" aria-describedby="estoque" value="<?=$produto['estoque']?>" placeholder="quantidade de estoque" required>
+    <input type="number" class="form-control" name="estoque" id="estoque" aria-describedby="estoque" value="<?=$produto['estoque']?>" placeholder="quantidade de estoque">
   </div>
   <div class="form-group">
     <label for="preco">Preço</label>
-    <input type="number" class="form-control" id="preco" aria-describedby="preco" value="<?=$produto['preco']?>" placeholder="R$" required>
+    <input type="number" class="form-control" name="preco" id="preco" aria-describedby="preco" value="<?=$produto['preco']?>" placeholder="R$">
   </div>
   <div class="form-group pb-3 pt-2">
 
-    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+    <input type="file" class="form-control-file" name="imagem" id="imagem" value="<?=$produto['imagem']?>"">
   </div>
-  <button type="submit" class="btn btn-cancelar ">Cancelar</button>
-  <button type="submit" class="btn btn-cadastrar">Cadastrar</button>
+  <a href="read.php" type="submit" class="btn btn-cancelar">Cancelar</a>
+  <button type="submit" name="editar" value="editar" class="btn btn-cadastrar">Editar</button>
 </form>
 
 
@@ -122,11 +121,3 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 </body>
 </html>
-
-//<?php
-//    require('conexao.php');
-//
-//    mysqli_query($conexao, "UPDATE produtos 
-//        SET descricao = '$descricao', marca = '$marca', estoque = '$estoque', preco = '$preco', imagem = '$imagem' 
-//        WHERE id = $id");
-//?>

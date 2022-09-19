@@ -120,7 +120,7 @@
   <tbody class="produtos w-100">
   <?php while($registro = mysqli_fetch_assoc($resultado)): ?>
     <tr >
-      <td  style="text-align: center" > </td>
+      <td  style="text-align: center" > <?php echo '<img src="'.$registro['imagem'].'">' ?></td>
       <td > <?=$registro['id']?></td>
       <td > <?=$registro['descricao']?></td>
       <td > <?=$registro['marca']?></td>
