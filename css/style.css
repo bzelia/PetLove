@@ -1,0 +1,94 @@
+
+      *{
+        font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+      
+       .top .text-logo{
+       font-size: 1.5em;
+       color: #73787E;
+        }
+
+       .prod h3{
+        font-size: 2em;
+        color: #73787E;
+ 
+       }
+       .formulario{
+        width: 60%;
+        margin: auto;
+       }
+      .formulario label{
+        color: #707070
+      } 
+        header{
+        border-bottom: 1px solid  #F7E0DA ;
+        }
+
+        form{
+            margin: auto;
+        }
+
+      .btn-cancelar{
+       border: 1px solid #BF8A7C;
+       color: #BF8A7C;
+       padding: 10px 30px;
+      }
+
+      .btn-cadastrar{
+        border: 1px solid #BF8A7C;
+        background-color: #BF8A7C;
+        color: #fff;
+        
+        padding: 10px 40px;
+        margin-left: 5px;
+       }
+       .btn-cadastrar:hover{
+        background-color: #b67766;
+        color: #fff;
+       }
+       .btn-cancelar:hover{
+        border: 1px solid #b67766;
+        color: #b67766;
+       }
+        .table img{
+          width: 60%;
+         
+        }
+        .table td {
+          width: 15%;
+          border: 1px solid #E3BBA9;
+          color: #73787E;
+      
+        }
+        .thead-top{
+          background-color: #F7E0DA;
+        }
+        .thead-top th{
+          color: #707070;
+        }
+        tbody{
+          background: #fff;
+        }
+        .btn-editar{
+          background-color: #AFABAC;
+        }
+        .btn-editar:hover{
+            background-color: #999999;
+          }
+        .btn-excluir{
+          background-color: #BF8A7C;
+        }
+        .btn-excluir:hover{
+            background-color: #b67766;
+          }
+      .new-p{
+        background-color: #F7E0DA;
+        padding: 10px 18px;
+        color: #707070;
+        font-size: .9em;
+        display : flex;
+        align-items : center;
+        justify-content : center;
+      }
+     
+

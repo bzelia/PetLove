@@ -7,59 +7,9 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
     <title>Cadastrar PetLove</title>
 
-    <style>
-/* Color Theme Swatches in Hex */
-.Rose-gold-gray-1-hex { color: #73787E; }
-.Rose-gold-gray-2-hex { color: #AFABAC; }
-.Rose-gold-gray-3-hex { color: #F7E0DA; }
-.Rose-gold-gray-4-hex { color: #E3BBA9; }
-.Rose-gold-gray-5-hex { color: #BF8A7C; }
-
-      *{
-        font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
-      
-      }
-      
-       .top .text-logo{
-       font-size: 1.5em;
-       color: #73787E;
-          }
-       .prod h3{
-        font-size: 2em;
-        color: #73787E;
-        text-align: center;
-     
-       }
-       .formulario{
-        width: 60%;
-        margin: auto;
-       }
-      .formulario label{
-        color: #707070
-      } 
-      
-        header{
-        border-bottom: 1px solid  #F7E0DA ;
-        }
-
-      .btn-cancelar{
-       border: 1px solid #BF8A7C;
-       color: #BF8A7C;
-       padding: 10px 30px;
-  
-  
-      }
-      .btn-cadastrar{
-        background-color: #F7E0DA;
-        color: #505050;
-        padding: 10px 30px;
-        margin-left: 10px;  
-  
-      }
- 
-    </style>
 </head>
 <body>
 
@@ -80,7 +30,7 @@
   </div>
 </div>
 
-<form action="insert.php" method="post">
+<form class="w-50 pb-5" action="insert.php" method="post">
   <div class="form-group">
     <label for="nome">Nome</label>
     <input type="text" class="form-control" name="descricao" id="descricao" aria-describedby="descricao" placeholder="nome do produto" required>
@@ -95,13 +45,13 @@
   </div>
   <div class="form-group">
     <label for="preco">Preço</label>
-    <input type="number" class="form-control" name="preco" id="preco" aria-describedby="preco" placeholder="R$" required>
+    <input type="number" min="0.00" max="10000.00" step="0.01" class="form-control" name="preco" id="preco" aria-describedby="preco" placeholder="R$" required>
   </div>
   <div class="form-group pb-3 pt-2">
 
-    <input type="file" class="form-control-file" name="imagem" id="imagem">
+    <input type="file" class="form-control-file pb-3" name="imagem" id="imagem">
   </div>
-  <button type="submit" class="btn btn-cancelar">Cancelar</button>
+  <a href="read.php" type="text" class="btn btn-cancelar">Cancelar</a>
   <button type="submit" class="btn btn-cadastrar">Cadastrar</button>
 </form>
 
