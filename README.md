@@ -2,7 +2,7 @@
 ### CRUD em PHP + MySQL
 
 Acadêmicas: Brunna Cellia, Kássia Zama e Natalia Santos. <br>
-Professor: Renan Haguiwara. <br>
+Professor: Renan Hagiwara. <br>
 Disciplina: Programação para Internet. <br> 
 
 ### Create com preenchimento obrigatório de campos
